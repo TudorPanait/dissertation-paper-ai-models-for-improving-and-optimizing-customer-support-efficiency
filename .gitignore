@@ -1,0 +1,8 @@
+.venv-win/
+.venv-mac/
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
