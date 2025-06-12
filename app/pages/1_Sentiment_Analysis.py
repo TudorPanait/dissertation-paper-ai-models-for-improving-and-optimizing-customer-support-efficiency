@@ -7,7 +7,7 @@ from textblob import TextBlob
 from langchain_openai import ChatOpenAI
 
 def header():
-    st.set_page_config(page_title="Sentiment Analysis", page_icon=":bar_chart:")
+    st.set_page_config(page_title="Sentiment Analysis", page_icon=":neutral_face:")
     st.title("Sentiment Analysis")
     st.write("This page is dedicated to sentiment analysis tasks.")
     load_dotenv()
