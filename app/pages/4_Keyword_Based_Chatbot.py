@@ -36,10 +36,9 @@ def header():
     st.title("Keyword Based Chatbot")
     st.write("This page is dedicated to the keyword based chatbot.")
     st.session_state.use_ai = st.selectbox(
-        "Use AI for responses?",
+        "Enable AI for smarter keyword matching? (e.g., if 'Yes', typing 'Holla' will use AI to find the closest keyword match)",
         options=["No", "Yes"],
         index=0,
-        help="Select 'Yes' to use AI for keyword similarity matching or 'No' to use predefined keyword-based responses using difflib.",
     )
     load_dotenv()
 
@@ -109,7 +108,6 @@ def ai_keyword_similarity(user_input):
         )
     ]
     matched_keyword = llm.invoke(message).content.strip()
-    print(f"Matched keyword: {matched_keyword}")
 
     return matched_keyword if matched_keyword in KEYWORD_RESPONSES else "default"
 
